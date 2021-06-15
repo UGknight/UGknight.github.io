@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Notes_1Tag:复数的范数，狄拉克符号，玻恩定理1.复数的欧几里得范数Wiki链接： https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;%E8%8C%83%E6%95%B0 如果将复平面看作欧几里得平面$\mathbb{R}^2$，那么复数的欧几里得范数是其绝对值（又称为模）。这样，我们可把$x+iy$视为欧几里得平面上的一个向量，由此，这个向量的欧几里得范数即为$\sqrt{x^">
+<meta property="og:type" content="article">
+<meta property="og:title" content="notes">
+<meta property="og:url" content="https://ugknight.github.io/2021/06/15/notes/index.html">
+<meta property="og:site_name" content="云胡不喜">
+<meta property="og:description" content="Notes_1Tag:复数的范数，狄拉克符号，玻恩定理1.复数的欧几里得范数Wiki链接： https:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;%E8%8C%83%E6%95%B0 如果将复平面看作欧几里得平面$\mathbb{R}^2$，那么复数的欧几里得范数是其绝对值（又称为模）。这样，我们可把$x+iy$视为欧几里得平面上的一个向量，由此，这个向量的欧几里得范数即为$\sqrt{x^">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-15T11:21:46.000Z">
+<meta property="article:modified_time" content="2021-06-15T11:21:54.976Z">
+<meta property="article:author" content="Sanfeng Zhou">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>notes</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2021/06/15/hello-world/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ugknight.github.io/2021/06/15/notes/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ugknight.github.io/2021/06/15/notes/&text=notes"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ugknight.github.io/2021/06/15/notes/&is_video=false&description=notes"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=notes&body=Check out this article: https://ugknight.github.io/2021/06/15/notes/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ugknight.github.io/2021/06/15/notes/&name=notes&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ugknight.github.io/2021/06/15/notes/&t=notes"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Notes-1"><span class="toc-number">1.</span> <span class="toc-text">Notes_1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tag-%E5%A4%8D%E6%95%B0%E7%9A%84%E8%8C%83%E6%95%B0%EF%BC%8C%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7%EF%BC%8C%E7%8E%BB%E6%81%A9%E5%AE%9A%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">Tag:复数的范数，狄拉克符号，玻恩定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%A4%8D%E6%95%B0%E7%9A%84%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E8%8C%83%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">1.复数的欧几里得范数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#X-knowledge-point"><span class="toc-number">1.3.</span> <span class="toc-text">X.knowledge point</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.4.</span> <span class="toc-text">2.狄拉克符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%8E%BB%E6%81%A9%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">3.玻恩定理</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        notes
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Sanfeng Zhou</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-06-15T11:21:46.000Z" itemprop="datePublished">2021-06-15</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Notes-1"><a href="#Notes-1" class="headerlink" title="Notes_1"></a>Notes_1</h3><h4 id="Tag-复数的范数，狄拉克符号，玻恩定理"><a href="#Tag-复数的范数，狄拉克符号，玻恩定理" class="headerlink" title="Tag:复数的范数，狄拉克符号，玻恩定理"></a>Tag:复数的范数，狄拉克符号，玻恩定理</h4><h4 id="1-复数的欧几里得范数"><a href="#1-复数的欧几里得范数" class="headerlink" title="1.复数的欧几里得范数"></a>1.复数的欧几里得范数</h4><p><strong>Wiki链接：</strong> <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%8C%83%E6%95%B0">https://zh.wikipedia.org/wiki/%E8%8C%83%E6%95%B0</a></p>
+<p>如果将复平面看作欧几里得平面$\mathbb{R}^2$，那么复数的欧几里得范数是其绝对值（又称为模）。这样，我们可把$x+iy$视为欧几里得平面上的一个向量，由此，这个向量的欧几里得范数即为$\sqrt{x^2+y^2}$（最初由欧拉提出）。</p>
+<h4 id="X-knowledge-point"><a href="#X-knowledge-point" class="headerlink" title="X.knowledge point"></a>X.knowledge point</h4><p>psi n. 希腊字母表的第23个字母($\psi$)</p>
+<h4 id="2-狄拉克符号"><a href="#2-狄拉克符号" class="headerlink" title="2.狄拉克符号"></a>2.狄拉克符号</h4><p><strong>Wiki链接：</strong> <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7">https://zh.wikipedia.org/wiki/%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7</a></p>
+<ul>
+<li><p>bracket n.括号 -&gt; bra-ket -&gt; bra vector($\langle \psi|$)，ket vector($|\psi \rangle$)</p>
+</li>
+<li><p>The $|\psi \rangle$ notation is called <em><strong>Dirac notation</strong></em>, used to represent quantum states.</p>
+</li>
+<li><p>Mathematically, $|\psi \rangle$ (“ket vector”) is a <strong>column vector</strong>.</p>
+</li>
+<li><p>The <strong>dual/Hermitian conjugate</strong> of column vectors (i.e. row vectors), are called “bra vectors”:</p>
+</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>$|\psi \rangle = \left(\begin{array}{l} \alpha \ \beta \end{array}\right)$<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>$\langle \psi|=(\alpha^*,\beta^*)=\alpha^<em>\langle 0|+\beta^</em>\langle 1|$</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>“ket psi”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>“bra psi”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>$\alpha^*,\beta^*$ are <strong>complex conjugates</strong> of $\alpha,\beta$.</p>
+<ul>
+<li><p>duals of the standard basis vectors:$\langle 0| = (1,0)$ and $\langle 1| = (0,1)$.</p>
+</li>
+<li><p><strong>bra</strong> vector is a <strong>row</strong> vector,<strong>ket</strong> vector is a <strong>column</strong> vector.(bra vector是行向量，ket vector是列向量。)</p>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>1.$|\psi \rangle = \left(\begin{array}{l} 1 \ 0 \end{array}\right)$,$\langle \psi| = (1,0)$</p>
+<p>2.$|\psi \rangle = \left(\begin{array}{l} i \ \sqrt{3}-5i \end{array}\right)$,$\langle \psi| = (-i,\sqrt{3}+5i)$</p>
+<h4 id="3-玻恩定理"><a href="#3-玻恩定理" class="headerlink" title="3.玻恩定理"></a>3.玻恩定理</h4><p><strong>Wiki链接：</strong> <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%8E%BB%E6%81%A9%E5%AE%9A%E5%89%87">https://zh.wikipedia.org/wiki/%E7%8E%BB%E6%81%A9%E5%AE%9A%E5%89%87</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Notes-1"><span class="toc-number">1.</span> <span class="toc-text">Notes_1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tag-%E5%A4%8D%E6%95%B0%E7%9A%84%E8%8C%83%E6%95%B0%EF%BC%8C%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7%EF%BC%8C%E7%8E%BB%E6%81%A9%E5%AE%9A%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">Tag:复数的范数，狄拉克符号，玻恩定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%A4%8D%E6%95%B0%E7%9A%84%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E8%8C%83%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">1.复数的欧几里得范数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#X-knowledge-point"><span class="toc-number">1.3.</span> <span class="toc-text">X.knowledge point</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%8B%84%E6%8B%89%E5%85%8B%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.4.</span> <span class="toc-text">2.狄拉克符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%8E%BB%E6%81%A9%E5%AE%9A%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">3.玻恩定理</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ugknight.github.io/2021/06/15/notes/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ugknight.github.io/2021/06/15/notes/&text=notes"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ugknight.github.io/2021/06/15/notes/&is_video=false&description=notes"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=notes&body=Check out this article: https://ugknight.github.io/2021/06/15/notes/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ugknight.github.io/2021/06/15/notes/&title=notes"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ugknight.github.io/2021/06/15/notes/&name=notes&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ugknight.github.io/2021/06/15/notes/&t=notes"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Sanfeng Zhou
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
